@@ -40,12 +40,12 @@ it includes:
 
 
 * created table containing studentid, student name, room no, floor no and payment status.
-* inserted values of 20 people into the table
+* inserted 20 rows into the 4 table
 * displayed details of those where payment status is fully paid
 * displayed people where name started with S
-* displayed details of those who did not fully pay
+* displayed details of those from floor 1
 * updated room no of a person
-* counted the rows of the table
+* counted the rows of the table hostel
 
 
 
@@ -59,3 +59,4 @@ it includes:
 * er diagram png
 * demo video
 * readme file
+
