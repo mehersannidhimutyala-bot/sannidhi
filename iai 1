@@ -1,0 +1,127 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMFmSNKM3zpIw+SjeO0sbk3",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/mehersannidhimutyala-bot/sannidhi/blob/main/iai%201\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "shop_name = \"Craft Corner\"\n",
+        "currency = \"INR\"\n",
+        "tax_rate = 0.20\n",
+        "print(f\"Shop: {shop_name} | Currency: {currency} | Tax: {tax_rate*100:.0f}%\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "bxiWoMDiyn6M",
+        "outputId": "fed5a9eb-256f-4af0-c9d9-77bcec26d3f3"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Shop: Craft Corner | Currency: INR | Tax: 20%\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Lists: customers & items\n",
+        "customers = [\"uthara\", \"ramesh\", \"suresh\", \"mahesh\", \"arjun\"]\n",
+        "items = [\"chart\", \"Pencil\", \"bag\", \"highlighter\", \"crayons\"]"
+      ],
+      "metadata": {
+        "id": "hhXYw1R6yy_x"
+      },
+      "execution_count": 9,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Dictionaries: transactions\n",
+        "transactions = [\n",
+        "{\"id\": 101, \"customer\": \"uthara\", \"item\": \"chart\", \"qty\": 2, \"price\": 60.00},\n",
+        "{\"id\": 102, \"customer\": \"ramesh\", \"item\": \"Pencil\", \"qty\": 5, \"price\": 15.50},\n",
+        "{\"id\": 103, \"customer\": \"suresh\", \"item\": \"bag\", \"qty\": 1, \"price\": 850.00},\n",
+        "{\"id\": 104, \"customer\": \"mahes\", \"item\": \"highlighter\", \"qty\": 3, \"price\": 45.00},\n",
+        "{\"id\": 105, \"customer\": \"arjun\", \"item\": \"crayons\", \"qty\": 10, \"price\": 20.00},\n",
+        "]"
+      ],
+      "metadata": {
+        "id": "T1E8VHlyzOJT"
+      },
+      "execution_count": 10,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"\\n----- Transactions Table ----\")\n",
+        "print(\"ID Customer Item Qty UnitPrice LineTotal\")\n",
+        "print(\"-\"*58)\n",
+        "grand_total = 0.0\n",
+        "for tx in transactions:\n",
+        "    line_total = tx[\"qty\"] * tx[\"price\"]\n",
+        "    grand_total += line_total\n",
+        "    print(f'{tx[\"id\"]:<4} {tx[\"customer\"]:<9} {tx[\"item\"]:<10} {tx[\"qty\"]:<5} {tx[\"price\"]:<10.2f} {line_total:>8.2f}')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "wVDPAUNfzxG9",
+        "outputId": "6f02d7ee-5e26-4515-c66e-02d11e194c63"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "----- Transactions Table ----\n",
+            "ID Customer Item Qty UnitPrice LineTotal\n",
+            "----------------------------------------------------------\n",
+            "101  uthara    chart      2     60.00        120.00\n",
+            "102  ramesh    Pencil     5     15.50         77.50\n",
+            "103  suresh    bag        1     850.00       850.00\n",
+            "104  mahes     highlighter 3     45.00        135.00\n",
+            "105  arjun     crayons    10    20.00        200.00\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
